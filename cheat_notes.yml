@@ -113,7 +113,7 @@ terraform init \
     -backend-config="unlock_method=DELETE" \
     -backend-config="retry_wait_min=5"
 after this is done, run the tf destroy cmd with the variables inputed manually. (e.g below) 
-terraform destroy -auto-approve -var-file="env-config/dr/terraform.tfvars" -var="access_key=AKIAXM453GYZKL5MGDLN" -var="secret_key=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" -var="region=us-west-2"
+terraform destroy -auto-approve -var-file="env-config/dr/terraform.tfvars" -var="access_key=***" -var="secret_key=***" -var="region=us-west-2"
 #this will destroy the resources created without triggring the pipelin.
 #Reason for doing this is if the build isn't successful during the apply stage, you can destroy it from your local.
 #However, if build waS successful, then create a terraform_desrtoy branch  
